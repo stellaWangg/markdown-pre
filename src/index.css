@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+:root {
+  background-color: #adc2a9;
+  /*box */
+  --box-shadow: 5px 5px 0 0 #313632;
+  --max-width: 1170px;
+  --radius: 0.5rem;
+  --box-height: 400px;
+  box-sizing: border-box;
+
+  --clr-grey-1: hsl(210, 5%, 31%);
+}
+.main-sec {
+  margin: auto;
+  max-width: var(--max-width);
+  width: 90vw;
+  max-height: 100vh;
+}
+h1.title {
+  text-align: center;
+  color: #fef5ed;
+  font-family: "Rubik Moonrocks", cursive;
+}
+.workload {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.1rem;
+  width: 75vw;
+  display: grid;
+  row-gap: 4rem;
+}
+.markdown {
+  padding: 3rem;
+  color: #3d562c;
+}
+
+.input {
+  box-shadow: var(--box-shadow);
+  border-color: transparent;
+  border-radius: var(--radius);
+  background-color: #fef5ed;
+  padding: 2rem;
+  line-height: 2rem;
+  min-height: 20vh;
+}
+blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  border-left: 5px solid var(--clr-grey-1);
+  color: var(--clr-grey-1);
+  padding-left: 2rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+blockquote ::first-letter {
+  text-transform: uppercase;
+}
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 992px) {
+  .workload {
+    grid-template-columns: 1.5fr 1fr;
+    margin: 2rem;
+    column-gap: 4rem;
+    width: 83vw;
+  }
+  .input {
+    height: var(--box-height);
+    width: 60vh;
+  }
+}
